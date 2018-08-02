@@ -35,8 +35,9 @@ function callOpenTriviaDB() {
 		xhr.send();
 	}
 
-	//console.log(response);
+	console.log(response);
 
+	/*
 	var myQuery = "INSERT;";
 
 	client.query(myQuery, (err, res) => {
@@ -45,7 +46,8 @@ function callOpenTriviaDB() {
 			console.log(JSON.stringify(row));
 		}
 		client.end();
-	})
+	});
+	*/
 }
 
 callOpenTriviaDB();
