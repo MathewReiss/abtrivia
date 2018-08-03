@@ -21,6 +21,12 @@ var apiParams = [
 function callOpenTriviaDB() {
 	var apiEndpoint = "https://opentdb.com/api.php?category=9"; //General Knowledge
 	var today = new Date();
+
+	if(today.getDay() === 0 || today.getDay() == 6) {
+		console.log("No trivia on the weekend!");
+		return;
+	}
+
 	var response = [];
 
 	for(var d = 0; d < apiParams[today.getDay()].length; d++) {
