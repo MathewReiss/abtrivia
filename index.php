@@ -10,7 +10,7 @@
 		return "user=$user password=$pass host=$host dbname=" . substr($path, 1) . " sslmode=require";
 	}
 
-	$conn = pg_connect(pg_connection_string_from_database_url());
+	$conn = pg_connect(pg_connection_string_from_database_url()) or die(pg_last_error());
 
 	if(pg_connection_status() === PGSQL_CONNECTION_OK){
 		$myquery = "SELECT data FROM questions ORDER BY day DESC LIMIT 1";
