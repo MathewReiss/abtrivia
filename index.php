@@ -13,12 +13,15 @@
 
 		if(!$result) {
 			//Query Error
+			echo "Query Error!";
 			exit;
 		}
 
-		echo "$pg_fetch_row($result)[0]";
+		$row = $pg_fetch_row($result);
+		echo "Results: $row[0]";
 	} else {
 		//Connection Error
+		echo "Connection Error!";
 		exit;
 	}
 
