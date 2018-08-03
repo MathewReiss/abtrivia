@@ -22,7 +22,7 @@
 			exit;
 		}
 
-		$row = $pg_fetch_row($result);
+		$row = pg_fetch_row($result);
 		echo "Results: $row[0]";
 	//} else {
 		//Connection Error
