@@ -20,11 +20,11 @@ var apiParams = [
 
 function callOpenTriviaDB() {
 	var apiEndpoint = "https://opentdb.com/api.php?category=9"; //General Knowledge
-	var today = (new Date()).getDay();
+	var today = new Date();
 	var response = [];
 
-	for(var d = 0; d < apiParams[today].length; d++) {
-		var url = apiEndpoint + apiParams[today][d];
+	for(var d = 0; d < apiParams[today.getDay()].length; d++) {
+		var url = apiEndpoint + apiParams[today.getDay()][d];
 		var xhr = new XMLHttpRequest();
 		xhr.onreadystatechange = function() {
 			if(this.readyState == 4 && this.status == 200){
@@ -35,10 +35,13 @@ function callOpenTriviaDB() {
 		xhr.send();
 	}
 
-	console.log(response);
+	var data = { "results" : [] };
 
-	/*
-	var myQuery = "INSERT;";
+	for(var r = 0; r < response.length; r++) {
+		data.results.concat(response[r].results);
+	}
+
+	var myQuery = "INSERT INTO questions (day, data) VALUES ('" + today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + today.getDate() + "', '" + JSON.stringify(data) + "');";
 
 	client.query(myQuery, (err, res) => {
 		if(err) throw err;
@@ -46,8 +49,7 @@ function callOpenTriviaDB() {
 			console.log(JSON.stringify(row));
 		}
 		client.end();
-	});
-	*/
+	});	
 }
 
 callOpenTriviaDB();
