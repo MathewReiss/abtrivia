@@ -34,28 +34,23 @@ function callOpenTriviaDB() {
 		var xhr = new XMLHttpRequest();
 		xhr.onreadystatechange = function() {
 			if(this.readyState == 4 && this.status == 200){
-				response.push(this.responseText);
+				response.push(JSON.parse(this.responseText));
 			}
 		}
 		xhr.open("GET", url, false);
 		xhr.send();
 	}
 
-	var data = { "results" : [] };
-
-	for(var r = 0; r < response.length; r++) {
-		data.results.concat(response[r].results);
-	}
-
-	var myQuery = "INSERT INTO questions (day, data) VALUES ('" + today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + today.getDate() + "', '" + JSON.stringify(data) + "');";
-
+	var myQuery = "INSERT INTO questions (day, data) VALUES ('" + today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + today.getDate() + "', '" + JSON.stringify(response) + "');";
+	
 	client.query(myQuery, (err, res) => {
 		if(err) throw err;
 		for(let row of res.rows) {
 			console.log(JSON.stringify(row));
 		}
 		client.end();
-	});	
+	});
+		
 }
 
 callOpenTriviaDB();
