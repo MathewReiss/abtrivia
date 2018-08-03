@@ -42,9 +42,9 @@ function callOpenTriviaDB() {
 	}
 
 	var myQuery = "INSERT INTO questions (day, data) VALUES ('" + today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + today.getDate() + "', '" + JSON.stringify(response) + "');";
-	
+
 	client.query(myQuery, (err, res) => {
-		if(err) throw err;
+		if(err) console.log("Query Error: " + err);
 		for(let row of res.rows) {
 			console.log(JSON.stringify(row));
 		}
