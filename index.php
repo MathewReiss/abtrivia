@@ -5,7 +5,12 @@
 	header("Access-Control-Allow-Methods: GET");
 	header("Content-Type: application/json");
 
-	$conn = pg_connect(getenv("DATABASE_URL"));
+	function pg_connection_string_from_database_url() {
+		extract(parse_url($_ENV["DATABASE_URL"]));
+		return "user=$user password=$pass host=$host dbname=" . substr($path, 1) . " sslmode=require";
+	}
+
+	$conn = pg_connect(pg_connection_string_from_database_url());
 
 	if(pg_connection_status() === PGSQL_CONNECTION_OK){
 		$myquery = "SELECT data FROM questions ORDER BY day DESC LIMIT 1";
@@ -24,5 +29,7 @@
 		echo "Connection Error!";
 		exit;
 	}
+
+	pg_close();
 
 ?>
