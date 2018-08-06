@@ -7,11 +7,11 @@
 
 	$conn = pg_connect(getenv("DATABASE_URL"));
 
-	$myquery = "SELECT data FROM questions ORDER BY day DESC LIMIT 1";
+	$myquery = "SELECT * FROM questions ORDER BY day DESC LIMIT 1";
 	$result = pg_query($conn, $myquery);
 
 	$row = pg_fetch_row($result);
-	echo "$row[0]";
+	echo '{ "date" : "$row[0]", "questions" : $row[1] }';
 	
 	pg_close();
 
