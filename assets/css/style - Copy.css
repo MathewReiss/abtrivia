@@ -49,13 +49,6 @@
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700');
 
-@font-face {
-    font-family: 'Seville-Book';
-    src: url('Seville-Book.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
 .clear {
     clear: both
 }
@@ -178,10 +171,7 @@ font-family: 'Open Sans', sans-serif;
 .menu-area {}
 
 .logo {
-    margin-top: 28px;
-    font-family: 'Seville-Book', Arial, sans-serf;
-    font-size: 36px;
-    color: #fff;
+    margin-top: 27px;
 }
 
 .logo a {
