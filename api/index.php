@@ -11,7 +11,7 @@
 	$result = pg_query($conn, $myquery);
 
 	$row = pg_fetch_row($result);
-	echo '{ "date" : "' . $row[0] . '", "questions" : ' . $row[1] . ' }';
+	echo '{ "date" : "' . $row[0] . '", "questions" : ' . html_entity_decode($row[1]) . ' }';
 	
 	pg_close();
 
