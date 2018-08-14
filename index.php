@@ -202,7 +202,7 @@
                             <ul class="prc-list">
                                 <?php 
 
-                                    echo "<li>" . date() . "</li>";
+                                    echo "<li>" . date("d-m-Y") . "</li>";
 
                                 ?>
                                 <li>Scott R: 56</li>
