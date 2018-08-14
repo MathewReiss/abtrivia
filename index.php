@@ -184,6 +184,16 @@
     </section>
     <!-- download area end -->
 
+    <?php
+
+    	header("Access-Control-Allow-Headers: Content-Type");
+		header("Access-Control-Allow-Origin: *");
+		header("Access-Control-Allow-Methods: GET");
+		header("Content-Type: application/json");
+
+		$conn = pg_connect(getenv("DATABASE_URL"));
+    ?>
+
     <!-- pricing area start -->
     <section class="pricing-area ptb--120" id="leaderboard">
         <div class="container">
@@ -195,54 +205,60 @@
                 <div class="pricing-list">
                     <div class="col-md-4 col-sm-4 col-xs-12">
                         <div class="pricing-item text-center">
-                            <div class="prc-head bg-theme">
-                                <span>Longest Streak</span>
-                                <h4>56 Questions</h4>
+                            <div class="prc-head bg-theme">                                
+                                <h4>Longest Streak</h4>
                             </div>
                             <ul class="prc-list">
                                 <?php 
 
-                                    echo "<li>" . date("d-m-Y") . "</li>";
+                                    $myquery = "SELECT * FROM users ORDER BY streak DESC LIMIT 6";
+									$result = pg_query($conn, $myquery);
+									for($x = 0; $x < pg_num_rows($result); $x++){
+										$row = pg_fetch_row($result, $x);
+										echo "<li>" . $row[4] . " - " . $row[1] . "</li>";
+									}
+
+                                ?>                                
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="pricing-item text-center">
+                            <div class="prc-head bg-theme">
+                                
+                                <h4>Highest Accuracy</h4>
+                            </div>
+                            <ul class="prc-list">
+                                <?php 
+
+                                    $myquery = "SELECT * FROM users ORDER BY accuracy DESC LIMIT 6";
+									$result = pg_query($conn, $myquery);
+									for($x = 0; $x < pg_num_rows($result); $x++){
+										$row = pg_fetch_row($result, $x);
+										echo "<li>" . $row[4] . " - " . $row[2] . "</li>";
+									}
 
                                 ?>
-                                <li>Scott R: 56</li>
-                                <li>Mathew R: 45</li>
-                                <li>Kate E: 42</li>
-                                <li>Christopher S: 36</li>
-                                <li>Francis F: 31</li>
-                                <li>Matt S: 28</li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-4 col-xs-12">
                         <div class="pricing-item text-center">
                             <div class="prc-head bg-theme">
-                                <span>Highest Accuracy</span>
-                                <h4>87%</h4>
+                                
+                                <h4>The Regulars</h4>
                             </div>
                             <ul class="prc-list">
-                                <li>Sergey B: 99%</li>
-                                <li>Eric P: 98%</li>
-                                <li>Mark C: 92%</li>
-                                <li>Mitchell R: 80%</li>
-                                <li>Srihari S: 72%</li>
-                                <li>Kate E: 56%</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4 col-xs-12">
-                        <div class="pricing-item text-center">
-                            <div class="prc-head bg-theme">
-                                <span>The Regulars</span>
-                                <h4>45 Days</h4>
-                            </div>
-                            <ul class="prc-list">
-                                <li>Francis F: 45</li>
-                                <li>Bill M: 42</li>
-                                <li>John C: 40</li>
-                                <li>Kate M: 39</li>
-                                <li>Scott R: 36</li>
-                                <li>Kara K: 32</li>
+                                <?php 
+
+                                    $myquery = "SELECT * FROM users ORDER BY continuous DESC LIMIT 6";
+									$result = pg_query($conn, $myquery);
+									for($x = 0; $x < pg_num_rows($result); $x++){
+										$row = pg_fetch_row($result, $x);
+										echo "<li>" . $row[4] . " - " . $row[3] . "</li>";
+									}
+
+                                ?>
                             </ul>
                         </div>
                     </div>
@@ -251,6 +267,12 @@
         </div>
     </section>
     <!-- pricing area end -->
+
+    <?php
+
+    	pg_close();
+
+    ?>
 
     <!-- download area start -->
     <section class="download-area ptb--120 bg-theme" id="download">
