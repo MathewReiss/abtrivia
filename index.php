@@ -28,11 +28,11 @@
 </head>
 
 <body>
-    <!-- preloader area start 
+    <!-- preloader area start -->
     <div id="preloader">
         <div class="spinner"></div>
     </div>
-     preloader area end -->
+    <!-- preloader area end -->
     <!-- header area start -->
     <header class="header-area">
         <div class="container">
