@@ -439,8 +439,8 @@ font-family: 'Open Sans', sans-serif;
     margin-right: 23px;
     height: 70px;
     width: 70px;
-    border: 1px solid #ff5700;
-    color: #ff5700;
+    border: 1px solid #2196f3;
+    color: #000000;
     text-align: center;
     line-height: 70px;
     border-radius: 50%;
@@ -601,7 +601,7 @@ font-family: 'Open Sans', sans-serif;
 .screen-slider .owl-dots .owl-dot {
     height: 15px;
     width: 15px;
-    border: 1px solid #ff6818;
+    border: 1px solid #4caf50;
     display: inline-block;
     border-radius: 50%;
     margin: 0px 4px;
@@ -609,7 +609,7 @@ font-family: 'Open Sans', sans-serif;
 }
 
 .screen-slider .owl-dots .active {
-    background-color: #ff6818;
+    background: #4caf50;
 }
 
 /*===========================
@@ -951,7 +951,7 @@ END Achivement Area
 .testimonial-list .owl-dots .owl-dot {
     height: 15px;
     width: 15px;
-    border: 1px solid #ff6818;
+    border: 1px solid #4caf50;
     display: inline-block;
     border-radius: 50%;
     margin: 0px 4px;
@@ -959,7 +959,7 @@ END Achivement Area
 }
 
 .testimonial-list .owl-dots .active {
-    background-color: #ff6818;
+    background: #4caf50;
 }
 
 /*===========================
@@ -1125,7 +1125,7 @@ h4.contact-title {
 .contact-address ul li i {
     height: 30px;
     width: 30px;
-    border: 1px solid #ff6818;
+    border: 1px solid #000;
     color: #272727;
     border-radius: 50%;
     text-align: center;
@@ -1162,7 +1162,7 @@ h4.contact-title {
 .contact-form form #send {
     width: 130px;
     height: 40px;
-    background: #ff6818;
+    background: #000;
     border-radius: 20px;
     display: block;
     text-align: center;
