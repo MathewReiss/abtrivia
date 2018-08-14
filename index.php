@@ -215,7 +215,7 @@
 									$result = pg_query($conn, $myquery);
 									for($x = 0; $x < pg_num_rows($result); $x++){
 										$row = pg_fetch_row($result, $x);
-										echo "<li>" . $row[4] . " - " . $row[1] . " Correct</li>";
+										echo "<li>" . ($x == 0 ? "<strong>" : "<em>") . $row[4] . " - " . $row[1] . " Correct" . ($x == 0 ? "</strong>" : "</em>") . "</li>";
 									}
 
                                 ?>                                
@@ -235,7 +235,7 @@
 									$result = pg_query($conn, $myquery);
 									for($x = 0; $x < pg_num_rows($result); $x++){
 										$row = pg_fetch_row($result, $x);
-										echo "<li>" . $row[4] . " - " . $row[2] . "%</li>";
+										echo "<li>" . ($x == 0 ? "<strong>" : "<em>") . $row[4] . " - " . $row[2] . "%" . ($x == 0 ? "</strong>" : "</em>") . "</li>";
 									}
 
                                 ?>
@@ -255,7 +255,7 @@
 									$result = pg_query($conn, $myquery);
 									for($x = 0; $x < pg_num_rows($result); $x++){
 										$row = pg_fetch_row($result, $x);
-										echo "<li>" . $row[4] . " - " . $row[3] . " Days</li>";
+										echo "<li>" . ($x == 0 ? "<strong>" : "<em>") . $row[4] . " - " . $row[3] . " Days" . ($x == 0 ? "</strong>" : "</em>") . "</li>";
 									}
 
                                 ?>
