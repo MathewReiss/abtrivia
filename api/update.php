@@ -15,8 +15,6 @@
 
 	$row = pg_fetch_row($result);
 
-	echo "<script>console.log('Row Returned: " . $row . "');</script>";
-
 	$today = date('Y-m-d');
 
 	$streak = $row ? $row[1] : 0;
@@ -26,14 +24,11 @@
 	$lastgame = $row ? $row[5] : $today;
 	$currentstreak = $row ? $row[6] : 0;
 	$numgamesplayed = $row ? $row[7] : 0;
-	$numcorrect = $row ? $row[8] : $correct;
+	$numcorrect = $row ? $row[8] : 0;
 	$currentcontinuous = $row ? $row[9] : 0;
 	$lastgameperfect = $row ? $row[10] : false;
 
-	echo "<script>console.log('Row: " . $streak . ", " . $accuracy . ", " . $continuous . "');</script>";
-
 	if($today == $lastgame + (date(w) == 1 ? 3 : 1)) {
-		echo "<script>console.log('Played continuously');</script>";
 		$currentcontinuous++;
 		if($lastgameperfect) {
 			$currentstreak += $correct;
@@ -46,7 +41,7 @@
 	$continuous = max($continuous, $currentcontinuous);
 	$streak = max($streak, $currentstreak);
 
-	$lastgameperfect = ($correct == 6);
+	$lastgameperfect = ($correct == 6 ? true : false);
 
 	$numcorrect += $correct;
 	$numgamesplayed++;
