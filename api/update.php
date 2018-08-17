@@ -51,7 +51,7 @@
 	$lastgame = $today;
 
 	$myquery = "INSERT INTO users 
-				VALUES({$fitbit}, {$streak}, {$accuracy}, {$continuous}, {$display}, {$lastgame}, {$currentstreak}, {$numgamesplayed}, {$numcorrect}, {$currentcontinuous}, {$lastgameperfect}) 
+				VALUES('" . $fitbit . "', " . $streak . ", " . $accuracy . ", " . $continuous . ", '" . $display . "', " . $lastgame . ", " . $currentstreak . ", " . $numgamesplayed . ", " . $numcorrect . ", " . $currentcontinuous . ", " . $lastgameperfect . ") 
 				ON CONFLICT (fitbit) DO UPDATE 
 				SET streak = EXCLUDED.streak, 
 					accuracy = EXCLUDED.accuracy, 
