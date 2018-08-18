@@ -33,10 +33,8 @@
 	if(true) {
 		$currentcontinuous++;
 		if($lastgameperfect == 1) {
-			echo "Last game was perfect $lastgameperfect";
 			$currentstreak += $correct;
 		} else {
-			echo "Last game was NOT perfect $lastgameperfect";
 			$currentstreak = $correct;
 		}
 	} else {
@@ -52,7 +50,7 @@
 	$numcorrect += $correct;
 	$numgamesplayed++;
 
-	$accuracy = max($accuracy, $numcorrect / ($numgamesplayed*6));
+	$accuracy = $numcorrect / ($numgamesplayed*6);
 
 	$lastgame = $today;
 
