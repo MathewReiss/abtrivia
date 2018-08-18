@@ -9,11 +9,8 @@
 	$correct = $_GET['correct'];
 
 	$conn = pg_connect(getenv("DATABASE_URL"));
-
 	$myquery = "SELECT * FROM users WHERE fitbit='{$fitbit}';";
-
 	$result = pg_query($conn, $myquery);
-
 	$row = pg_fetch_row($result);
 
 	$today = date('Y-m-d');
@@ -33,18 +30,25 @@
 	$todaydate = date_create($today);
 	$diff = date_diff($lastgamedate, $todaydate, true);
 
-	echo "Diff: {$diff->days}";
+	if($diff->days == 1 || (date('w', $todaydate) == '1' && $diff->days == 3)) { //It's one day later OR it's Monday and three days later
 
-	if($diff->days == (1)) {
 		$currentcontinuous++;
+
 		if($lastgameperfect == 1) {
+
 			$currentstreak += $correct;
+
 		} else {
+
 			$currentstreak = $correct;
+
 		}
 	} else {
+
 		$currentstreak = $correct;
+
 		$currentcontinuous = 1;
+
 	}
 
 	$continuous = max($continuous, $currentcontinuous);
