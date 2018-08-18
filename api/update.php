@@ -32,7 +32,7 @@
 	//if($today == $lastgame + (date(w) == 1 ? 3 : 1)) {
 	if(true) {
 		$currentcontinuous++;
-		if($lastgameperfect) {
+		if($lastgameperfect == true) {
 			echo "Last game was perfect $lastgameperfect";
 			$currentstreak += $correct;
 		} else {
@@ -58,7 +58,7 @@
 
 	$myquery = "
 				INSERT INTO users
-				VALUES('" . $fitbit . "', " . $streak . ", " . $accuracy . ", " . $continuous . ", '" . $display . "', '" . $lastgame . "', " . $currentstreak . ", " . $numgamesplayed . ", " . $numcorrect . ", " . $currentcontinuous . ", " . ($lastgameperfect ? "true" : "false") . ") 
+				VALUES('" . $fitbit . "', " . $streak . ", " . $accuracy . ", " . $continuous . ", '" . $display . "', '" . $lastgame . "', " . $currentstreak . ", " . $numgamesplayed . ", " . $numcorrect . ", " . $currentcontinuous . ", " . ($lastgameperfect == true ? "true" : "false") . ") 
 				ON CONFLICT (fitbit) DO UPDATE 
 				SET streak = EXCLUDED.streak, 
 					accuracy = EXCLUDED.accuracy, 
