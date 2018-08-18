@@ -33,7 +33,7 @@
 	if(true) {
 		$currentcontinuous++;
 		if($lastgameperfect) {
-			echo "Last game was perfect"
+			echo "Last game was perfect";
 			$currentstreak += $correct;
 		}
 	} else {
