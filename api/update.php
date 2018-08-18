@@ -10,7 +10,11 @@
 
 	$conn = pg_connect(getenv("DATABASE_URL"));
 
-	$myquery = "SELECT * FROM users WHERE fitbit='{$fitibt}';";
+	$myquery = "SELECT * FROM users WHERE fitbit='{$fitbit}';";
+	echo $myquery . "
+
+	";
+
 	$result = pg_query($conn, $myquery);
 
 	$row = pg_fetch_row($result);
