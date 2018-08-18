@@ -35,6 +35,9 @@
 		if($lastgameperfect) {
 			echo "Last game was perfect";
 			$currentstreak += $correct;
+		} else {
+			echo "Last game was NOT perfect";
+			$currentstreak = $correct;
 		}
 	} else {
 		$currentstreak = $correct;
