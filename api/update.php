@@ -15,7 +15,9 @@
 
 	$row = pg_fetch_row($result);
 
-	echo $row;
+	echo $row . " 
+
+	";
 
 	$today = date('Y-m-d');
 
