@@ -27,7 +27,7 @@
 	$numgamesplayed = $row ? $row[7] : 0;
 	$numcorrect = $row ? $row[8] : 0;
 	$currentcontinuous = $row ? $row[9] : 0;
-	$lastgameperfect = $row ? ($row[10] == 'true' ? true : false) : false;
+	$lastgameperfect = $row ? $row[10] : false;//($row[10] == 'true' ? true : false) : false;
 
 	//if($today == $lastgame + (date(w) == 1 ? 3 : 1)) {
 	if(true) {
