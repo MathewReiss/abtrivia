@@ -11,17 +11,10 @@
 	$conn = pg_connect(getenv("DATABASE_URL"));
 
 	$myquery = "SELECT * FROM users WHERE fitbit='{$fitbit}';";
-	echo $myquery . "
-
-	";
 
 	$result = pg_query($conn, $myquery);
 
 	$row = pg_fetch_row($result);
-
-	echo $row . " 
-
-	";
 
 	$today = date('Y-m-d');
 
@@ -36,9 +29,8 @@
 	$currentcontinuous = $row ? $row[9] : 0;
 	$lastgameperfect = $row ? $row[10] : false;
 
-	echo $streak . ", " . $accuracy . " - - - ";
-
-	if($today == $lastgame + (date(w) == 1 ? 3 : 1)) {
+	//if($today == $lastgame + (date(w) == 1 ? 3 : 1)) {
+	if(true) {
 		$currentcontinuous++;
 		if($lastgameperfect) {
 			$currentstreak += $correct;
@@ -47,8 +39,6 @@
 		$currentstreak = $correct;
 		$currentcontinuous = 1;
 	}
-
-	echo $streak . ", " . $accuracy . " - - - ";
 
 	$continuous = max($continuous, $currentcontinuous);
 	$streak = max($streak, $currentstreak);
@@ -61,8 +51,6 @@
 	$accuracy = max($accuracy, $numcorrect / ($numgamesplayed*6));
 
 	$lastgame = $today;
-
-	echo $streak . ", " . $accuracy . " - - - ";
 
 	$myquery = "
 				INSERT INTO users
@@ -78,8 +66,6 @@
 					numcorrect = EXCLUDED.numcorrect, 
 					currentcontinuous = EXCLUDED.currentcontinuous, 
 					lastgameperfect = EXCLUDED.lastgameperfect;";
-
-	echo $myquery;
 
 	$result = pg_query($conn, $myquery);
 
