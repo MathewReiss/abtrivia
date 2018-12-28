@@ -135,13 +135,11 @@
     <section class="download-area ptb--120 bg-theme" id="download">
         <div class="container">
             <div class="section-title">
-                <h2>Download Appson</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</p>
+                <h2>Download AB Trivia</h2>
+                <p>The most popular trivia game on the Fitbit platform!</p>
             </div>
             <div class="download-btns btn-area text-center">
-                <a href="#"><i class="fa fa-android"></i>android story</a>
-                <a href="#"><i class="fa fa-apple"></i>android story</a>
-                <a href="#"><i class="fa fa-windows"></i>Windows story</a>
+                <a href="#"><i class="fa fa-android"></i>App Gallery</a>                
             </div>
         </div>
     </section>
@@ -172,13 +170,11 @@
     <section class="download-area ptb--120 bg-theme2" id="download">
         <div class="container">
             <div class="section-title">
-                <h2>Download Appson</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</p>
+                <h2>Download AB Trivia</h2>
+                <p>Compete with friends to see which one of you is the trivia champ!</p>
             </div>
             <div class="download-btns btn-area text-center">
-                <a href="#"><i class="fa fa-android"></i>android story</a>
-                <a href="#"><i class="fa fa-apple"></i>android story</a>
-                <a href="#"><i class="fa fa-windows"></i>Windows story</a>
+                <a href="#"><i class="fa fa-android"></i>App Gallery</a>                
             </div>
         </div>
     </section>
@@ -231,7 +227,7 @@
                             <ul class="prc-list">
                                 <?php 
 
-                                    $myquery = "SELECT * FROM users ORDER BY accuracy DESC LIMIT 6";
+                                    $myquery = "SELECT * FROM users WHERE numgamesplayed > 5 ORDER BY accuracy DESC LIMIT 6";
 									$result = pg_query($conn, $myquery);
 									for($x = 0; $x < pg_num_rows($result); $x++){
 										$row = pg_fetch_row($result, $x);
@@ -241,27 +237,7 @@
                                 ?>
                             </ul>
                         </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4 col-xs-12">
-                        <div class="pricing-item text-center">
-                            <div class="prc-head bg-theme">
-                                
-                                <h4>The Regulars</h4>
-                            </div>
-                            <ul class="prc-list">
-                                <?php 
-
-                                    $myquery = "SELECT * FROM users ORDER BY continuous DESC LIMIT 6";
-									$result = pg_query($conn, $myquery);
-									for($x = 0; $x < pg_num_rows($result); $x++){
-										$row = pg_fetch_row($result, $x);
-										echo "<li>" . ($x == 0 ? "<strong>" : "<em>") . $row[4] . " - " . $row[3] . " Days" . ($x == 0 ? "</strong>" : "</em>") . "</li>";
-									}
-
-                                ?>
-                            </ul>
-                        </div>
-                    </div>
+                    </div>              
                 </div>
             </div>
         </div>
@@ -278,13 +254,11 @@
     <section class="download-area ptb--120 bg-theme" id="download">
         <div class="container">
             <div class="section-title">
-                <h2>Download Appson</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</p>
+                <h2>Download AB Trivia</h2>
+                <p>Exercise your mind as well as your body!</p>
             </div>
             <div class="download-btns btn-area text-center">
-                <a href="#"><i class="fa fa-android"></i>android story</a>
-                <a href="#"><i class="fa fa-apple"></i>android story</a>
-                <a href="#"><i class="fa fa-windows"></i>Windows story</a>
+                <a href="#"><i class="fa fa-android"></i>App Gallery</a>                
             </div>
         </div>
     </section>
@@ -378,39 +352,31 @@
     <section class="download-area ptb--120 bg-theme2" id="download">
         <div class="container">
             <div class="section-title">
-                <h2>Download Appson</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</p>
+                <h2>Download AB Trivia</h2>
+                <p>Come on now, you've read this far. Just download it already!</p>
             </div>
             <div class="download-btns btn-area text-center">
-                <a href="#"><i class="fa fa-android"></i>android story</a>
-                <a href="#"><i class="fa fa-apple"></i>android story</a>
-                <a href="#"><i class="fa fa-windows"></i>Windows story</a>
+                <a href="#"><i class="fa fa-android"></i>App Gallery</a>                
             </div>
         </div>
     </section>
     <!-- download area end -->
     
-    <!-- map area start -->
-    <div id="map"></div>
-    <!-- map area end -->
     <!-- contact area start -->
     <div class="contact-area">
         <div class="container">
             <section class="contact-inner" id="contact">
                 <div class="section-title text-black">
-                    <h2>Contact US</h2>
+                    <h2>Contact</h2>
                 </div>
                 <div class="contact-flex-container">
-                    <div class="contact-address">
-                        <h4 class="contact-title">Address</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et </p>
+                    <div class="contact-address">                        
+                        <p>If you have any questions, or wish to request a refund, feel free to contact the developer below.</p>
                         <ul>
-                            <li class="h-addres"><i class="fa fa-home"></i>300 Kutubkhallpoint
-                                <br>New York,United States</li>
-                            <li><i class="fa fa-phone"></i>+0044 545 989 626</li>
-                            <li><i class="fa fa-envelope"></i>Example@gmail.com</li>
+                            <li><i class="fa fa-envelope"></i><a href="https://k-pay.io/contact/1978716408" target="_blank">KiezelPay Support Page for AB Trivia</a></li>
                         </ul>
                     </div>
+		    <!--
                     <div class="contact-form">
                         <h4 class="contact-title">Get In Touch</h4>
                         <form action="#">
@@ -422,6 +388,7 @@
                             <input type="submit" id="send" value="Send">
                         </form>
                     </div>
+		    -->
                 </div>
             </section>
         </div>
@@ -448,158 +415,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         </div>
     </footer>
     <!-- footer area end -->
-    <!-- google map activation start-->
-    <script>
-    function initMap() {
-        // Styles a map in night mode.
-        var map = new google.maps.Map(document.getElementById('map'), {
-            center: { lat: 40.674, lng: -73.945 },
-            zoom: 12,
-            styles: [{
-                    "elementType": "geometry",
-                    "stylers": [{
-                        "color": "#f5f5f5"
-                    }]
-                },
-                {
-                    "elementType": "labels",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                },
-                {
-                    "elementType": "labels.icon",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                },
-                {
-                    "elementType": "labels.text.fill",
-                    "stylers": [{
-                        "color": "#616161"
-                    }]
-                },
-                {
-                    "elementType": "labels.text.stroke",
-                    "stylers": [{
-                        "color": "#f5f5f5"
-                    }]
-                },
-                {
-                    "featureType": "administrative.land_parcel",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                },
-                {
-                    "featureType": "administrative.land_parcel",
-                    "elementType": "labels.text.fill",
-                    "stylers": [{
-                        "color": "#bdbdbd"
-                    }]
-                },
-                {
-                    "featureType": "administrative.neighborhood",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                },
-                {
-                    "featureType": "poi",
-                    "elementType": "geometry",
-                    "stylers": [{
-                        "color": "#eeeeee"
-                    }]
-                },
-                {
-                    "featureType": "poi",
-                    "elementType": "labels.text.fill",
-                    "stylers": [{
-                        "color": "#757575"
-                    }]
-                },
-                {
-                    "featureType": "poi.park",
-                    "elementType": "geometry",
-                    "stylers": [{
-                        "color": "#e5e5e5"
-                    }]
-                },
-                {
-                    "featureType": "poi.park",
-                    "elementType": "labels.text.fill",
-                    "stylers": [{
-                        "color": "#9e9e9e"
-                    }]
-                },
-                {
-                    "featureType": "road",
-                    "elementType": "geometry",
-                    "stylers": [{
-                        "color": "#ffffff"
-                    }]
-                },
-                {
-                    "featureType": "road.arterial",
-                    "elementType": "labels.text.fill",
-                    "stylers": [{
-                        "color": "#757575"
-                    }]
-                },
-                {
-                    "featureType": "road.highway",
-                    "elementType": "geometry",
-                    "stylers": [{
-                        "color": "#dadada"
-                    }]
-                },
-                {
-                    "featureType": "road.highway",
-                    "elementType": "labels.text.fill",
-                    "stylers": [{
-                        "color": "#616161"
-                    }]
-                },
-                {
-                    "featureType": "road.local",
-                    "elementType": "labels.text.fill",
-                    "stylers": [{
-                        "color": "#9e9e9e"
-                    }]
-                },
-                {
-                    "featureType": "transit.line",
-                    "elementType": "geometry",
-                    "stylers": [{
-                        "color": "#e5e5e5"
-                    }]
-                },
-                {
-                    "featureType": "transit.station",
-                    "elementType": "geometry",
-                    "stylers": [{
-                        "color": "#eeeeee"
-                    }]
-                },
-                {
-                    "featureType": "water",
-                    "elementType": "geometry",
-                    "stylers": [{
-                        "color": "#c9c9c9"
-                    }]
-                },
-                {
-                    "featureType": "water",
-                    "elementType": "labels.text.fill",
-                    "stylers": [{
-                        "color": "#9e9e9e"
-                    }]
-                }
-            ]
-        });
-    }
-    </script>
-    <!-- google map activation end -->
+    
     <!-- Scripts -->
     <script src="assets/js/jquery-3.2.0.min.js"></script>
     <script src="assets/js/jquery-ui.js"></script>
