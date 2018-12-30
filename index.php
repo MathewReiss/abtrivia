@@ -40,7 +40,7 @@
                 <div class="menu-area">
                     <div class="col-md-3 col-sm-6 col-xs-6">
                         <div class="logo">
-                            <a href="index.html"><img src="assets/img/icon/logo.png" alt="AB Trivia"></a>
+                            <a href="#home"><img src="assets/img/icon/logo.png" alt="AB Trivia"></a>
                         </div>
                     </div>
                     <div class="col-md-9 hidden-xs hidden-sm">
