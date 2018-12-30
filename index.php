@@ -103,21 +103,21 @@
                         <p>AB Trivia is a trivia game designed specifically to be played on a smartwatch. Available now for the Fitbit Ionic&trade; and Fitbit Versa&trade;.</p>
                         <div class="about-ft">
                             <div class="ft-single">
-                                <div class="icon"><i class="fa fa-desktop"></i></div>
+                                <div class="icon"><i class="fa fa-clock"></i></div>
                                 <div class="ft-info">
                                     <h4>Play On Your Own Time</h4>
                                     <p>Six new questions every weekday, available whenever you have a spare moment for some mental fitness. But be careful - one wrong answer and your streak is over!</p>
                                 </div>
                             </div>
                             <div class="ft-single">
-                                <div class="icon"><i class="fa fa-android"></i></div>
+                                <div class="icon"><i class="fa fa-columns"></i></div>
                                 <div class="ft-info">
                                     <h4>Two Possible Answers</h4>
                                     <p>For simplicity, each question only has two available choices - A or B. Some of these will be Multiple Choice and others will be True or False. However...</p>
                                 </div>
                             </div>
                             <div class="ft-single">
-                                <div class="icon"><i class="fa fa-headphones"></i></div>
+                                <div class="icon"><i class="fa fa-trophy"></i></div>
                                 <div class="ft-info">
                                     <h4>Difficulty & Leaderboard</h4>
                                     <p>...the questions get harder as the week goes on! Keep your streak going as long as possible to appear on the <a href="#leaderboard">leaderboard</a>.<br><em>Note: This requires logging in to your Fitbit account in the app settings.</em></p>
@@ -202,8 +202,8 @@
                     <div class="col-md-4 col-sm-4 col-xs-12">
                         <div class="pricing-item text-center">
                             <div class="prc-head bg-theme">                                
-                                <h4>On Fire</h4>
-				    <h5>(Current Streak)</h5>
+                                <h4>On Fire</h4><br />
+				    <h5 style="color:white;">(Current Streak)</h5>
                             </div>
                             <ul class="prc-list">
                                 <?php 
@@ -222,8 +222,8 @@
                     <div class="col-md-4 col-sm-4 col-xs-12">
                         <div class="pricing-item text-center">
                             <div class="prc-head bg-theme">                                
-                                <h4>Bullseye</h4>
-				    <h5>(Accuracy)</h5>
+                                <h4>Bullseye</h4><br />
+				    <h5 style="color:white;">(Accuracy)</h5>
                             </div>
                             <ul class="prc-list">
                                 <?php 
@@ -242,8 +242,8 @@
 		    <div class="col-md-4 col-sm-4 col-xs-12">
                         <div class="pricing-item text-center">
                             <div class="prc-head bg-theme">                                
-                                <h4>Hall of Fame</h4>
-				    <h5>(Best Streak)</h5>
+                                <h4>Hall of Fame</h4><br />
+				    <h5 style="color:white;">(Best Streak)</h5>
                             </div>
                             <ul class="prc-list">
                                 <?php 
@@ -394,7 +394,7 @@
                     <div class="contact-address">                        
                         <p>If you have any questions, or wish to request a refund, feel free to contact the developer below.</p>
                         <ul>
-                            <li><i class="fa fa-envelope"></i><a href="https://k-pay.io/contact/1978716408" target="_blank">KiezelPay Support Page for AB Trivia</a></li>
+                            <li><i class="fa fa-headset"></i><a href="https://k-pay.io/contact/1978716408" target="_blank">KiezelPay Support Page for AB Trivia</a></li>
                         </ul>
                     </div>
 		    <!--
@@ -420,15 +420,14 @@
         <div class="footer-area bg-black ptb--50">
             <div class="container">
                 <div class="footer-inner">
-                    <!--
-                    <ul class="fsocial">
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    
+                    <ul class="fsocial">                        
+                        <li><a href="https://twitter.com/abtrivia" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="https://k-pay.io/contact/1978716408"><i class="fa fa-headset"></i></a></li>
                     </ul>
-                    -->
-                    <p class="copy-right"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    
+                    	<!--<a href="https://k-pay.io/contact/1978716408" target="_blank" style="color:white;">KiezelPay Support Page for AB Trivia</a>-->
+			<p class="copy-right"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" style="color:white;"><strong>Colorlib</strong></a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                 </div>
