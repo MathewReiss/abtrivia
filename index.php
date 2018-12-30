@@ -195,23 +195,23 @@
         <div class="container">
             <div class="section-title text-black">
                 <h2>Leaderboard</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</p>
+                <p>Connect AB Trivia to your Fitbit account via the Settings Page to compete!</p>
             </div>
             <div class="row">
                 <div class="pricing-list">
                     <div class="col-md-4 col-sm-4 col-xs-12">
                         <div class="pricing-item text-center">
                             <div class="prc-head bg-theme">                                
-                                <h4>Longest Streak</h4>
+                                <h4>On Fire (Current Streak)</h4>
                             </div>
                             <ul class="prc-list">
                                 <?php 
 
-                                    $myquery = "SELECT * FROM users ORDER BY streak DESC LIMIT 6";
+                                    $myquery = "SELECT * FROM users ORDER BY currentstreak DESC LIMIT 6";
 									$result = pg_query($conn, $myquery);
 									for($x = 0; $x < pg_num_rows($result); $x++){
 										$row = pg_fetch_row($result, $x);
-										echo "<li>" . ($x == 0 ? "<strong>" : "<em>") . $row[4] . " - " . $row[1] . " Correct" . ($x == 0 ? "</strong>" : "</em>") . "</li>";
+										echo "<li>" . ($x == 0 ? "<strong>" : "<em>") . $row[4] . " - " . $row[6] . " Correct" . ($x == 0 ? "</strong>" : "</em>") . "</li>";
 									}
 
                                 ?>                                
@@ -220,14 +220,13 @@
                     </div>
                     <div class="col-md-4 col-sm-4 col-xs-12">
                         <div class="pricing-item text-center">
-                            <div class="prc-head bg-theme">
-                                
-                                <h4>Highest Accuracy</h4>
+                            <div class="prc-head bg-theme">                                
+                                <h4>Bullseye (Accuracy)</h4>
                             </div>
                             <ul class="prc-list">
                                 <?php 
 
-                                    $myquery = "SELECT * FROM users WHERE numgamesplayed > 5 ORDER BY accuracy DESC LIMIT 6";
+                                    $myquery = "SELECT * FROM users WHERE numgamsplayed > 5 ORDER BY accuracy DESC LIMIT 6";
 									$result = pg_query($conn, $myquery);
 									for($x = 0; $x < pg_num_rows($result); $x++){
 										$row = pg_fetch_row($result, $x);
@@ -237,7 +236,26 @@
                                 ?>
                             </ul>
                         </div>
-                    </div>              
+                    </div>
+		    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="pricing-item text-center">
+                            <div class="prc-head bg-theme">                                
+                                <h4>Hall of Fame (Best Streak)</h4>
+                            </div>
+                            <ul class="prc-list">
+                                <?php 
+
+                                    $myquery = "SELECT * FROM users ORDER BY streak DESC LIMIT 6";
+									$result = pg_query($conn, $myquery);
+									for($x = 0; $x < pg_num_rows($result); $x++){
+										$row = pg_fetch_row($result, $x);
+										echo "<li>" . ($x == 0 ? "<strong>" : "<em>") . $row[4] . " - " . $row[1] . "%" . ($x == 0 ? "</strong>" : "</em>") . "</li>";
+									}
+
+                                ?>
+                            </ul>
+                        </div>
+		    </div>
                 </div>
             </div>
         </div>
