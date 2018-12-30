@@ -252,7 +252,7 @@
 									$result = pg_query($conn, $myquery);
 									for($x = 0; $x < pg_num_rows($result); $x++){
 										$row = pg_fetch_row($result, $x);
-										echo "<li>" . ($x == 0 ? "<strong>" : "<em>") . $row[4] . " - " . $row[1] . "%" . ($x == 0 ? "</strong>" : "</em>") . "</li>";
+										echo "<li>" . ($x == 0 ? "<strong>" : "<em>") . $row[4] . " - " . $row[1] . " Correct" . ($x == 0 ? "</strong>" : "</em>") . "</li>";
 									}
 
                                 ?>
@@ -289,8 +289,8 @@
     <section class="testimonial-area ptb--120" id="review">
         <div class="container">
             <div class="section-title text-black">
-                <h2>Testimonial</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</p>
+                <h2>Reviews</h2>
+                <p>See what others in the Fitbit Community have to say about AB Trivia:</p>
             </div>
             <div class="row">
                 <div class="testimonial-list owl-carousel">
@@ -302,14 +302,7 @@
                             </div>
                             <div class="author-info">
                                 <h4>John Deo</h4>
-                                <span>CEO Of iphone</span>
-                                <div class="review-stasr">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
+                                <span>CEO Of iphone</span>                                
                             </div>
                         </div>
                         <div class="tauthor-text">
@@ -325,14 +318,7 @@
                             </div>
                             <div class="author-info">
                                 <h4>Maria Hedge</h4>
-                                <span>CEO Of iphone</span>
-                                <div class="review-stasr">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
+                                <span>CEO Of iphone</span>                               
                             </div>
                         </div>
                         <div class="tauthor-text">
@@ -348,14 +334,7 @@
                             </div>
                             <div class="author-info">
                                 <h4>John Deo</h4>
-                                <span>CEO Of iphone</span>
-                                <div class="review-stasr">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
+                                <span>CEO Of iphone</span>                                
                             </div>
                         </div>
                         <div class="tauthor-text">
