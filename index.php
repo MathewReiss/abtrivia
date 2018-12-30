@@ -202,7 +202,8 @@
                     <div class="col-md-4 col-sm-4 col-xs-12">
                         <div class="pricing-item text-center">
                             <div class="prc-head bg-theme">                                
-                                <h4>On Fire (Current Streak)</h4>
+                                <h4>On Fire</h4>
+				    <p>(Current Streak)</p>
                             </div>
                             <ul class="prc-list">
                                 <?php 
@@ -221,12 +222,13 @@
                     <div class="col-md-4 col-sm-4 col-xs-12">
                         <div class="pricing-item text-center">
                             <div class="prc-head bg-theme">                                
-                                <h4>Bullseye (Accuracy)</h4>
+                                <h4>Bullseye</h4>
+				    <p>(Accuracy)</p>
                             </div>
                             <ul class="prc-list">
                                 <?php 
 
-                                    $myquery = "SELECT * FROM users WHERE numgamsplayed > 5 ORDER BY accuracy DESC LIMIT 6";
+                                    $myquery = "SELECT * FROM users WHERE numgamesplayed > 5 ORDER BY accuracy DESC LIMIT 6";
 									$result = pg_query($conn, $myquery);
 									for($x = 0; $x < pg_num_rows($result); $x++){
 										$row = pg_fetch_row($result, $x);
@@ -240,7 +242,8 @@
 		    <div class="col-md-4 col-sm-4 col-xs-12">
                         <div class="pricing-item text-center">
                             <div class="prc-head bg-theme">                                
-                                <h4>Hall of Fame (Best Streak)</h4>
+                                <h4>Hall of Fame</h4>
+				    <p>(Best Streak)</p>
                             </div>
                             <ul class="prc-list">
                                 <?php 
