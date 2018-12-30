@@ -203,7 +203,7 @@
                         <div class="pricing-item text-center">
                             <div class="prc-head bg-theme">                                
                                 <h4>On Fire</h4>
-				    <p>(Current Streak)</p>
+				    <h5>(Current Streak)</h5>
                             </div>
                             <ul class="prc-list">
                                 <?php 
@@ -223,7 +223,7 @@
                         <div class="pricing-item text-center">
                             <div class="prc-head bg-theme">                                
                                 <h4>Bullseye</h4>
-				    <p>(Accuracy)</p>
+				    <h5>(Accuracy)</h5>
                             </div>
                             <ul class="prc-list">
                                 <?php 
@@ -243,7 +243,7 @@
                         <div class="pricing-item text-center">
                             <div class="prc-head bg-theme">                                
                                 <h4>Hall of Fame</h4>
-				    <p>(Best Streak)</p>
+				    <h5>(Best Streak)</h5>
                             </div>
                             <ul class="prc-list">
                                 <?php 
