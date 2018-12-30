@@ -103,7 +103,7 @@
                         <p>AB Trivia is a trivia game designed specifically to be played on a smartwatch. Available now for the Fitbit Ionic&trade; and Fitbit Versa&trade;.</p>
                         <div class="about-ft">
                             <div class="ft-single">
-                                <div class="icon"><i class="fa fa-clock"></i></div>
+                                <div class="icon"><i class="fa fa-clock-o"></i></div>
                                 <div class="ft-info">
                                     <h4>Play On Your Own Time</h4>
                                     <p>Six new questions every weekday, available whenever you have a spare moment for some mental fitness. But be careful - one wrong answer and your streak is over!</p>
@@ -139,7 +139,7 @@
                 <p>The most popular trivia game on the Fitbit platform!</p>
             </div>
             <div class="download-btns btn-area text-center">
-                <a href="#"><i class="fa fa-android"></i>App Gallery</a>                
+                <a href="#"><i class="fa fa-download"></i>App Gallery</a>                
             </div>
         </div>
     </section>
@@ -174,7 +174,7 @@
                 <p>Compete with friends to see which one of you is the trivia champ!</p>
             </div>
             <div class="download-btns btn-area text-center">
-                <a href="#"><i class="fa fa-android"></i>App Gallery</a>                
+                <a href="#"><i class="fa fa-download"></i>App Gallery</a>                
             </div>
         </div>
     </section>
@@ -279,7 +279,7 @@
                 <p>Exercise your mind as well as your body!</p>
             </div>
             <div class="download-btns btn-area text-center">
-                <a href="#"><i class="fa fa-android"></i>App Gallery</a>                
+                <a href="#"><i class="fa fa-download"></i>App Gallery</a>                
             </div>
         </div>
     </section>
@@ -377,7 +377,7 @@
                 <p>Come on now, you've read this far. Just download it already!</p>
             </div>
             <div class="download-btns btn-area text-center">
-                <a href="#"><i class="fa fa-android"></i>App Gallery</a>                
+                <a href="#"><i class="fa fa-download"></i>App Gallery</a>                
             </div>
         </div>
     </section>
