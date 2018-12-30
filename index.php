@@ -382,51 +382,20 @@
         </div>
     </section>
     <!-- download area end -->
-    
-    <!-- contact area start -->
-    <div class="contact-area">
-        <div class="container">
-            <section class="contact-inner" id="contact">
-                <div class="section-title text-black">
-                    <h2>Contact</h2>
-                </div>
-                <div class="contact-flex-container">
-                    <div class="contact-address">                        
-                        <p>If you have any questions, or wish to request a refund, feel free to contact the developer below.</p>
-                        <ul>
-                            <li><i class="fa fa-headset"></i><a href="https://k-pay.io/contact/1978716408" target="_blank">KiezelPay Support Page for AB Trivia</a></li>
-                        </ul>
-                    </div>
-		    <!--
-                    <div class="contact-form">
-                        <h4 class="contact-title">Get In Touch</h4>
-                        <form action="#">
-                            <input type="text" class="input" name="name" placeholder="Your Name *">
-                            <input type="email" class="input" name="email" placeholder="Your Email address*">
-                            <input type="text" class="input" name="subject" placeholder="Your Subject*">
-                            <input type="text" class="input" name="name" placeholder="Your Message*">
-                            <textarea name="msg" class="input" id="msg" placeholder="Your Message*"></textarea>
-                            <input type="submit" id="send" value="Send">
-                        </form>
-                    </div>
-		    -->
-                </div>
-            </section>
-        </div>
-    </div>
-    <!-- contact area end -->
+   
     <!-- footer area start -->
     <footer>
         <div class="footer-area bg-black ptb--50">
             <div class="container">
                 <div class="footer-inner">
-                    
+                    <!--
                     <ul class="fsocial">                        
                         <li><a href="https://twitter.com/abtrivia" target="_blank"><i class="fa fa-twitter"></i></a></li>
                         <li><a href="https://k-pay.io/contact/1978716408"><i class="fa fa-headset"></i></a></li>
                     </ul>
+		    -->
                     
-                    	<!--<a href="https://k-pay.io/contact/1978716408" target="_blank" style="color:white;">KiezelPay Support Page for AB Trivia</a>-->
+                    	<p><a href="https://k-pay.io/contact/1978716408" target="_blank" style="color:white;">KiezelPay Support Page for AB Trivia</a></p>
 			<p class="copy-right"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" style="color:white;"><strong>Colorlib</strong></a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
