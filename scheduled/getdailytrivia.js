@@ -22,15 +22,15 @@ function callOpenTriviaDB() {
 	var apiEndpoint = "https://opentdb.com/api.php?";
 	var today = new Date();
 
-	if(today.getDay() === 0 || today.getDay() == 6) {
+	if(today.getDay() === 6 || today.getDay() == 5) {
 		console.log("No trivia on the weekend!");
 		return;
 	}
 
 	var response = [];
 
-	for(var d = 0; d < apiParams[today.getDay()].length; d++) {
-		var url = apiEndpoint + apiParams[today.getDay()][d];
+	for(var d = 0; d < apiParams[today.getDay()+1].length; d++) {
+		var url = apiEndpoint + apiParams[today.getDay()+1][d];
 		var xhr = new XMLHttpRequest();
 		xhr.onreadystatechange = function() {
 			if(this.readyState == 4 && this.status == 200){
@@ -41,7 +41,7 @@ function callOpenTriviaDB() {
 		xhr.send();
 	}
 
-	var myQuery = "INSERT INTO questions (day, data) VALUES ('" + today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + today.getDate() + "', '" + JSON.stringify(response) + "');";
+	var myQuery = "INSERT INTO questions (day, data) VALUES ('" + today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + (today.getDate() + 1) + "', '" + JSON.stringify(response) + "');";
 
 	client.query(myQuery, (err, res) => {
 		if(err) console.log("Query Error: " + err);
