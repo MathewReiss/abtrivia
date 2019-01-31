@@ -119,8 +119,8 @@
                             <div class="ft-single">
                                 <div class="icon"><i class="fa fa-trophy"></i></div>
                                 <div class="ft-info">
-                                    <h4>Difficulty & Leaderboard</h4>
-                                    <p>...the questions get harder as the week goes on! Keep your streak going as long as possible to appear on the <a href="#leaderboard">leaderboard</a>.<br><em>Note: This requires logging in to your Fitbit account in the app settings.</em></p>
+                                    <h4>Earn Achievements</h4>
+                                    <p>...the questions get harder as the week goes on! Keep at it to unlock achievements, and don't forget to <a href="https://twitter.com/abtrivia" target="_blank">Tweet your results</a>!</p>
                                 </div>
                             </div>
                         </div>
