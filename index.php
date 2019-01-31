@@ -50,9 +50,9 @@
                                     <li class="active"><a href="#home">Home</a></li>
                                     <li><a href="#about">About</a></li>
                                     <li><a href="#categories">Categories</a></li>                                   
-                                    <li><a href="#leaderboard">Leaderboard</a></li>
+                                    <!--<li><a href="#leaderboard">Leaderboard</a></li>
                                     <li><a href="#review">Reviews</a></li>                                    
-                                    <li><a href="#contact">Contact</a></li>
+                                    <li><a href="#contact">Contact</a></li>-->
                                 </ul>
                             </nav>
                         </div>
@@ -172,7 +172,7 @@
         <div class="container">
             <div class="section-title">
                 <h2>Download AB Trivia</h2>
-                <p>Compete with friends to see which one of you is the trivia champ!</p>
+                <p>Exercise your mind as well as your body, and earn achievements!</p>
             </div>
             <div class="download-btns btn-area text-center">
                 <a href="#"><i class="fa fa-download"></i>App Gallery</a>                
