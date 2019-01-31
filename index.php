@@ -74,7 +74,7 @@
                         <h2>6 Questions<br>&emsp;2 Possible Answers<br>&emsp;&emsp;5 Days a Week</h2>
                         <p>Do you have what it takes to exercise your mind as well as your body? Start playing the top trivia game for Fitbit today and see how you stack up against the competition!</p>
                         <div class="btn-area">
-                            <a href="#">Coming Soon! </a>
+                            <a href="https://gam.fitbit.com/gallery/app/5510f9bd-1f59-4b2f-a873-9fdcca0da898" target="_blank">Download Today!</a>
                         </div>
                     </div>
                 </div>
@@ -139,7 +139,7 @@
                 <p>The most popular trivia game on the Fitbit platform!</p>
             </div>
             <div class="download-btns btn-area text-center">
-                <a href="#"><i class="fa fa-download"></i>App Gallery</a>                
+                <a href="https://gam.fitbit.com/gallery/app/5510f9bd-1f59-4b2f-a873-9fdcca0da898"><i class="fa fa-download"></i>App Gallery</a>                
             </div>
         </div>
     </section>
@@ -175,7 +175,7 @@
                 <p>Exercise your mind as well as your body, and earn achievements!</p>
             </div>
             <div class="download-btns btn-area text-center">
-                <a href="#"><i class="fa fa-download"></i>App Gallery</a>                
+                <a href="https://gam.fitbit.com/gallery/app/5510f9bd-1f59-4b2f-a873-9fdcca0da898"><i class="fa fa-download"></i>App Gallery</a>                
             </div>
         </div>
     </section>
