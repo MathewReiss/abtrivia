@@ -150,16 +150,17 @@
         <div class="container">
             <div class="section-title text-black">
                 <h2>Categories</h2>
-                <p>Questions are sourced from the <a href="https://www.opentdb.com" target="_blank">Open Trivia Database</a>, and cover the following categories:</p>
+                <p>Questions are sourced from the <a href="https://www.opentdb.com" target="_blank">Open Trivia Database</a>, and cover General Knowledge, Science, Entertainment, History, and more!</p>
             </div>
             <div class="row">
                 <div class="screen-slider owl-carousel">
-                    <img src="assets/img/mobile/screen-slider/screen1.jpg" alt=" mobile screen">
-                    <img src="assets/img/mobile/screen-slider/screen2.jpg" alt=" mobile screen">
-                    <img src="assets/img/mobile/screen-slider/screen3.jpg" alt=" mobile screen">
-                    <img src="assets/img/mobile/screen-slider/screen4.jpg" alt=" mobile screen">
-                    <img src="assets/img/mobile/screen-slider/screen1.jpg" alt=" mobile screen">
-                    <img src="assets/img/mobile/screen-slider/screen3.jpg" alt=" mobile screen">
+                    <img src="assets/img/mobile/screen-slider/AB Celebrities.png" alt="Celebrities">
+                    <img src="assets/img/mobile/screen-slider/AB Entertainment.png" alt="Entertainment">
+                    <img src="assets/img/mobile/screen-slider/AB General.png" alt="General">
+                    <img src="assets/img/mobile/screen-slider/AB Geography.png" alt="Geography">
+                    <img src="assets/img/mobile/screen-slider/AB History.png" alt="History">
+                    <img src="assets/img/mobile/screen-slider/AB Science.png" alt="Science">
+		    <img src="assets/img/mobile/screen-slider/AB Sports.png" alt="Sports">
                 </div>
             </div>
         </div>
@@ -180,187 +181,6 @@
     </section>
     <!-- download area end -->
 
-    <?php
-
-    	header("Access-Control-Allow-Headers: Content-Type");
-		header("Access-Control-Allow-Origin: *");
-		header("Access-Control-Allow-Methods: GET");
-		header("Content-Type: application/json");
-
-		$conn = pg_connect(getenv("DATABASE_URL"));
-    ?>
-
-    <!-- pricing area start -->
-    <section class="pricing-area ptb--120" id="leaderboard">
-        <div class="container">
-            <div class="section-title text-black">
-                <h2>Leaderboard</h2>
-                <p>Connect AB Trivia to your Fitbit account via the Settings Page to compete!</p>
-            </div>
-            <div class="row">
-                <div class="pricing-list">
-                    <div class="col-md-4 col-sm-4 col-xs-12">
-                        <div class="pricing-item text-center">
-                            <div class="prc-head bg-theme">                                
-                                <h4>On Fire</h4><br />
-				    <h5 style="color:white;">(Current Streak)</h5>
-                            </div>
-                            <ul class="prc-list">
-                                <?php 
-
-                                    $myquery = "SELECT * FROM users ORDER BY currentstreak DESC LIMIT 6";
-									$result = pg_query($conn, $myquery);
-									for($x = 0; $x < pg_num_rows($result); $x++){
-										$row = pg_fetch_row($result, $x);
-										echo "<li>" . ($x == 0 ? "<strong>" : "<em>") . $row[4] . " - " . $row[6] . " Correct" . ($x == 0 ? "</strong>" : "</em>") . "</li>";
-									}
-
-                                ?>                                
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4 col-xs-12">
-                        <div class="pricing-item text-center">
-                            <div class="prc-head bg-theme">                                
-                                <h4>Bullseye</h4><br />
-				    <h5 style="color:white;">(Accuracy)</h5>
-                            </div>
-                            <ul class="prc-list">
-                                <?php 
-
-                                    $myquery = "SELECT * FROM users WHERE numgamesplayed > 5 ORDER BY accuracy DESC LIMIT 6";
-									$result = pg_query($conn, $myquery);
-									for($x = 0; $x < pg_num_rows($result); $x++){
-										$row = pg_fetch_row($result, $x);
-										echo "<li>" . ($x == 0 ? "<strong>" : "<em>") . $row[4] . " - " . $row[2] . "%" . ($x == 0 ? "</strong>" : "</em>") . "</li>";
-									}
-
-                                ?>
-                            </ul>
-                        </div>
-                    </div>
-		    <div class="col-md-4 col-sm-4 col-xs-12">
-                        <div class="pricing-item text-center">
-                            <div class="prc-head bg-theme">                                
-                                <h4>Hall of Fame</h4><br />
-				    <h5 style="color:white;">(Best Streak)</h5>
-                            </div>
-                            <ul class="prc-list">
-                                <?php 
-
-                                    $myquery = "SELECT * FROM users ORDER BY streak DESC LIMIT 6";
-									$result = pg_query($conn, $myquery);
-									for($x = 0; $x < pg_num_rows($result); $x++){
-										$row = pg_fetch_row($result, $x);
-										echo "<li>" . ($x == 0 ? "<strong>" : "<em>") . $row[4] . " - " . $row[1] . " Correct" . ($x == 0 ? "</strong>" : "</em>") . "</li>";
-									}
-
-                                ?>
-                            </ul>
-                        </div>
-		    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- pricing area end -->
-
-    <?php
-
-    	pg_close();
-
-    ?>
-
-    <!-- download area start -->
-    <section class="download-area ptb--120 bg-theme" id="download">
-        <div class="container">
-            <div class="section-title">
-                <h2>Download AB Trivia</h2>
-                <p>Exercise your mind as well as your body!</p>
-            </div>
-            <div class="download-btns btn-area text-center">
-                <a href="#"><i class="fa fa-download"></i>App Gallery</a>                
-            </div>
-        </div>
-    </section>
-    <!-- download area end -->
-
-    <!-- testimonial area start -->
-    <section class="testimonial-area ptb--120" id="review">
-        <div class="container">
-            <div class="section-title text-black">
-                <h2>Reviews</h2>
-                <p>See what others in the Fitbit Community have to say about AB Trivia:</p>
-            </div>
-            <div class="row">
-                <div class="testimonial-list owl-carousel">
-                    <!-- single item start -->
-                    <div class="testimonial-item">
-                        <div class="tauthor-meta">
-                            <div class="author-thumb">
-                                <img src="assets/img/author/author1.jpg" alt="author image">
-                            </div>
-                            <div class="author-info">
-                                <h4>John Deo</h4>
-                                <span>CEO Of iphone</span>                                
-                            </div>
-                        </div>
-                        <div class="tauthor-text">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do smod tempor incididunt ut labore et dolore magna aliqua. enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
-                        </div>
-                    </div>
-                    <!-- single item end -->
-                    <!-- single item start -->
-                    <div class="testimonial-item">
-                        <div class="tauthor-meta">
-                            <div class="author-thumb">
-                                <img src="assets/img/author/author2.jpg" alt="author image">
-                            </div>
-                            <div class="author-info">
-                                <h4>Maria Hedge</h4>
-                                <span>CEO Of iphone</span>                               
-                            </div>
-                        </div>
-                        <div class="tauthor-text">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do smod tempor incididunt ut labore et dolore magna aliqua. enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
-                        </div>
-                    </div>
-                    <!-- single item end -->
-                    <!-- single item start -->
-                    <div class="testimonial-item">
-                        <div class="tauthor-meta">
-                            <div class="author-thumb">
-                                <img src="assets/img/author/author1.jpg" alt="author image">
-                            </div>
-                            <div class="author-info">
-                                <h4>John Deo</h4>
-                                <span>CEO Of iphone</span>                                
-                            </div>
-                        </div>
-                        <div class="tauthor-text">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do smod tempor incididunt ut labore et dolore magna aliqua. enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
-                        </div>
-                    </div>
-                    <!-- single item end -->
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- testimonial area end -->
-
-    <!-- download area start -->
-    <section class="download-area ptb--120 bg-theme2" id="download">
-        <div class="container">
-            <div class="section-title">
-                <h2>Download AB Trivia</h2>
-                <p>Come on now, you've read this far. Just download it already!</p>
-            </div>
-            <div class="download-btns btn-area text-center">
-                <a href="#"><i class="fa fa-download"></i>App Gallery</a>                
-            </div>
-        </div>
-    </section>
-    <!-- download area end -->
    
     <!-- footer area start -->
     <footer>
