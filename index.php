@@ -93,6 +93,7 @@
             <div class="row">
                 <div class="col-md-5 hidden-sm hidden-xs">
                     <div class="about-left-thumb">
+			<br><br>
                         <img src="assets/img/mobile/screen-slider/AB 3D.png" alt="Compatible with Fitbit Versa&trade;">
                     </div>
                 </div>
