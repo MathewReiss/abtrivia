@@ -25,6 +25,19 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
+	
+    <style type="text/css"> 
+  	.mobileShow {display: none;}
+	.mobileHide { display: inline; }
+
+   	/* Smartphone Portrait and Landscape */ 
+   	@media only screen 
+     	and (min-device-width : 320px) 
+     	and (max-device-width : 480px){ 
+       		.mobileShow {display: inline;}
+		.mobileHide {display: none;}
+   	}
+     </style>
 </head>
 
 <body>
@@ -73,7 +86,7 @@
                     <div class="slider-nner">
                         <h2>6 Questions<br>&emsp;2 Possible Answers<br>&emsp;&emsp;5 Days a Week</h2>
                         <p>Do you have what it takes to exercise your mind as well as your body? Start playing the top trivia game for Fitbit today and become a trivia champ!</p>
-                        <div class="btn-area">
+                        <div class="btn-area mobileShow">
                             <a href="https://gam.fitbit.com/gallery/app/5510f9bd-1f59-4b2f-a873-9fdcca0da898" target="_blank">Download Now</a>
                         </div>
                     </div>
@@ -139,9 +152,12 @@
                 <h2>Download AB Trivia</h2>
                 <p>The most popular trivia game on the Fitbit platform!</p>
             </div>
-            <div class="download-btns btn-area text-center">
+            <div class="download-btns btn-area text-center mobileShow">
                 <a href="https://gam.fitbit.com/gallery/app/5510f9bd-1f59-4b2f-a873-9fdcca0da898"><i class="fa fa-download"></i>App Gallery</a>                
             </div>
+	    <div class="mobileHide">
+		    <p>Just search for "AB Trivia" in the Fitbit App Gallery.</p>
+	    </div>
         </div>
     </section>
     <!-- download area end -->
@@ -175,9 +191,12 @@
                 <h2>Download AB Trivia</h2>
                 <p>Exercise your mind as well as your body, and earn achievements!</p>
             </div>
-            <div class="download-btns btn-area text-center">
+            <div class="download-btns btn-area text-center mobileShow">
                 <a href="https://gam.fitbit.com/gallery/app/5510f9bd-1f59-4b2f-a873-9fdcca0da898"><i class="fa fa-download"></i>App Gallery</a>                
             </div>
+	    <div class="mobileHide">
+		    <p>Just search for "AB Trivia" in the Fitbit App Gallery.</p> 
+	    </div>
         </div>
     </section>
     <!-- download area end -->
