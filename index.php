@@ -87,7 +87,9 @@
                         <h2>6 Questions<br>&emsp;2 Possible Answers<br>&emsp;&emsp;5 Days a Week</h2>
                         <p>Do you have what it takes to exercise your mind as well as your body? Start playing the top trivia game for Fitbit today and become a trivia champ!</p>
                         <div class="btn-area mobileShow">
-                            <a href="https://gam.fitbit.com/gallery/app/5510f9bd-1f59-4b2f-a873-9fdcca0da898" target="_blank">Download Now</a>
+				<center>
+                            		<a href="https://gam.fitbit.com/gallery/app/5510f9bd-1f59-4b2f-a873-9fdcca0da898" target="_blank">Download Now</a>
+				</center>
                         </div>
                     </div>
                 </div>
@@ -156,7 +158,9 @@
 		    </div>
             </div>
             <div class="download-btns btn-area text-center mobileShow">
-                <a href="https://gam.fitbit.com/gallery/app/5510f9bd-1f59-4b2f-a873-9fdcca0da898"><i class="fa fa-download"></i>App Gallery</a>                
+		    <center>
+                	<a href="https://gam.fitbit.com/gallery/app/5510f9bd-1f59-4b2f-a873-9fdcca0da898"><i class="fa fa-download"></i>App Gallery</a>                
+		    </center>
             </div>	    		    	    
         </div>
     </section>
@@ -195,7 +199,9 @@
 		    </div>
             </div>
             <div class="download-btns btn-area text-center mobileShow">
-                <a href="https://gam.fitbit.com/gallery/app/5510f9bd-1f59-4b2f-a873-9fdcca0da898"><i class="fa fa-download"></i>App Gallery</a>                
+		    <center>
+                	<a href="https://gam.fitbit.com/gallery/app/5510f9bd-1f59-4b2f-a873-9fdcca0da898"><i class="fa fa-download"></i>App Gallery</a>                
+		    </center>
             </div>	    
         </div>
     </section>
