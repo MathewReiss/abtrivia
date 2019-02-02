@@ -32,7 +32,7 @@
 
    	/* Smartphone Portrait and Landscape */ 
    	@media only screen 
-     	and (min-device-width : 320px) 
+     	and (min-device-width : 240px) 
      	and (max-device-width : 480px){ 
        		.mobileShow {display: inline;}
 		.mobileHide {display: none;}
@@ -150,14 +150,12 @@
         <div class="container">
             <div class="section-title">
                 <h2>Download AB Trivia</h2>
-                <p>The most popular trivia game on the Fitbit platform!</p>
+                <p>The most popular trivia game on the Fitbit platform!</p><br><br>
+		<p class="mobileHide">Just search for "AB Trivia" in the Fitbit App Gallery.</p>
             </div>
             <div class="download-btns btn-area text-center mobileShow">
                 <a href="https://gam.fitbit.com/gallery/app/5510f9bd-1f59-4b2f-a873-9fdcca0da898"><i class="fa fa-download"></i>App Gallery</a>                
-            </div>
-	    <div class="mobileHide">
-		    <p>Just search for "AB Trivia" in the Fitbit App Gallery.</p>
-	    </div>
+            </div>	    		    	    
         </div>
     </section>
     <!-- download area end -->
@@ -189,14 +187,12 @@
         <div class="container">
             <div class="section-title">
                 <h2>Download AB Trivia</h2>
-                <p>Exercise your mind as well as your body, and earn achievements!</p>
+                <p>Exercise your mind as well as your body, and earn achievements!</p><br><br>
+		<p class="mobileHide">Just search for "AB Trivia" in the Fitbit App Gallery.</p>
             </div>
             <div class="download-btns btn-area text-center mobileShow">
                 <a href="https://gam.fitbit.com/gallery/app/5510f9bd-1f59-4b2f-a873-9fdcca0da898"><i class="fa fa-download"></i>App Gallery</a>                
-            </div>
-	    <div class="mobileHide">
-		    <p>Just search for "AB Trivia" in the Fitbit App Gallery.</p> 
-	    </div>
+            </div>	    
         </div>
     </section>
     <!-- download area end -->
