@@ -150,8 +150,10 @@
         <div class="container">
             <div class="section-title">
                 <h2>Download AB Trivia</h2>
-                <p>The most popular trivia game on the Fitbit platform!</p><br><br>
-		<p class="mobileHide">Just search for "AB Trivia" in the Fitbit App Gallery.</p>
+                <p>The most popular trivia game on the Fitbit platform!</p>
+		<div class="mobileHide"><br><br>
+			<p>Just search for "AB Trivia" in the Fitbit App Gallery.</p>
+		    </div>
             </div>
             <div class="download-btns btn-area text-center mobileShow">
                 <a href="https://gam.fitbit.com/gallery/app/5510f9bd-1f59-4b2f-a873-9fdcca0da898"><i class="fa fa-download"></i>App Gallery</a>                
@@ -187,8 +189,10 @@
         <div class="container">
             <div class="section-title">
                 <h2>Download AB Trivia</h2>
-                <p>Exercise your mind as well as your body, and earn achievements!</p><br><br>
-		<p class="mobileHide">Just search for "AB Trivia" in the Fitbit App Gallery.</p>
+                <p>Exercise your mind as well as your body, and earn achievements!</p>
+		    <div class="mobileHide"><br><br>
+			<p>Just search for "AB Trivia" in the Fitbit App Gallery.</p>
+		    </div>
             </div>
             <div class="download-btns btn-area text-center mobileShow">
                 <a href="https://gam.fitbit.com/gallery/app/5510f9bd-1f59-4b2f-a873-9fdcca0da898"><i class="fa fa-download"></i>App Gallery</a>                
