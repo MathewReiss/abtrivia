@@ -108,9 +108,9 @@
             <div class="row">
                 <div class="col-md-5"><!-- hidden-sm hidden-xs"> -->
                     <div class="about-left-thumb">
-			    <div class="hidden-sm hidden-xs"><br><br></div>
+			    <div class="mobileHide"><br><br></div>
                         <img src="assets/img/mobile/screen-slider/AB 3D.png" alt="Compatible with Fitbit Versa&trade;">
-			    
+			    <div class="mobileShow"><br><br></div>
                     </div>
                 </div>
                 <div class="col-md-6 col-md-offset-1 col-sm-12 col-xs-12">
