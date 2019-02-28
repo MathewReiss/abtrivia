@@ -108,13 +108,14 @@
             <div class="row">
                 <div class="col-md-5"><!-- hidden-sm hidden-xs"> -->
                     <div class="about-left-thumb">
-			<br><br>
+			    <div class="hidden-sm hidden-xs"><br><br></div>
                         <img src="assets/img/mobile/screen-slider/AB 3D.png" alt="Compatible with Fitbit Versa&trade;">
+			    
                     </div>
                 </div>
                 <div class="col-md-6 col-md-offset-1 col-sm-12 col-xs-12">
                     <div class="about-content">
-                        <span>Welcome to AB Trivia.</span>
+                        <span class="hidden-sm hidden-xs">>Welcome to AB Trivia.</span>
                         <h2>Exercise your mind <em>and</em> your body</h2>
                         <p>AB Trivia is a trivia game designed specifically to be played on a smartwatch. Available now for the Fitbit Ionic&trade; and Fitbit Versa&trade;.</p>
                         <div class="about-ft">
