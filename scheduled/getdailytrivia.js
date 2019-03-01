@@ -22,7 +22,7 @@ function callOpenTriviaDB() {
 	var apiEndpoint = "https://opentdb.com/api.php?";
 	var today = new Date();
 
-	if(today.getDay() === 6 || today.getDay() == 5) {
+	if(today.getDay() === 6 || today.getDay() == 0) {
 		console.log("No trivia on the weekend!");
 		return;
 	}
@@ -41,7 +41,7 @@ function callOpenTriviaDB() {
 		xhr.send();
 	}
 
-	var myQuery = "INSERT INTO questions (day, data) VALUES ('" + today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + (today.getDate() + 1) + "', '" + JSON.stringify(response) + "');";
+	var myQuery = "INSERT INTO questions (day, data) VALUES ('" + today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + (today.getDate()) + "', '" + JSON.stringify(response) + "');";
 
 	client.query(myQuery, (err, res) => {
 		if(err) console.log("Query Error: " + err);
