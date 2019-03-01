@@ -29,8 +29,8 @@ function callOpenTriviaDB() {
 
 	var response = [];
 
-	for(var d = 0; d < apiParams[today.getDay()+1].length; d++) {
-		var url = apiEndpoint + apiParams[today.getDay()+1][d];
+	for(var d = 0; d < apiParams[today.getDay()].length; d++) {
+		var url = apiEndpoint + apiParams[today.getDay()][d];
 		var xhr = new XMLHttpRequest();
 		xhr.onreadystatechange = function() {
 			if(this.readyState == 4 && this.status == 200){
